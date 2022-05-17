@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include <stdio.h>
 
 #include "ft_putchar/ft_putchar.c"
@@ -6,6 +5,7 @@
 #include "ft_print_reverse_alphabet/ft_print_reverse_alphabet.c"
 #include "ft_print_numbers/ft_print_numbers.c"
 #include "ft_is_negative/ft_is_negative.c"
+#include "ft_print_comb/ft_print_comb.c"
 
 int main()
 {
