@@ -6,13 +6,14 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 14:38:23 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/18 15:08:04 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/18 22:18:58 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int temp;
+	int	temp;
+
 	temp = *a;
 	*a = *b;
 	*b = temp;

@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 17:49:14 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/18 21:58:33 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/18 22:19:04 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strlen(char *str)
 	int	len;
 
 	len = 0;
-	while(str[len] != '\0')
+	while (str[len] != '\0')
 		len++;
 	return (len);
 }
