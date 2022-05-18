@@ -4,6 +4,9 @@
 #include "ex01/ft_ultimate_ft.c"
 #include "ex02/ft_swap.c"
 #include "ex03/ft_div_mod.c"
+#include "ex04/ft_ultimate_div_mod.c"
+#include "ex05/ft_putstr.c"
+#include "ex06/ft_strlen.c"
 
 int main()
 {
@@ -23,5 +26,20 @@ int main()
 	int div;
 	int mod;
 	ft_div_mod(5, 3, &div, &mod);
-	printf("5 3 div: %d mid : %d", div, mod);
+	printf("div: %d mid : %d", div, mod);
+	printf("\n\n");
+
+	a = 5; b = 3;
+	ft_ultimate_div_mod(&a, &b);
+	printf("div : %d mod : %d", a, b);
+	printf("\n\n");
+
+	char *str = "Hello";
+	ft_putstr(str);
+	printf("\n\n");
+
+	printf("%d", ft_strlen(str));
+	printf("\n\n");
+	
+
 }
