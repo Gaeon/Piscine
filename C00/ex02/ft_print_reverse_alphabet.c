@@ -6,9 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 10:33:54 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/18 10:34:51 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/18 21:58:29 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)
 {

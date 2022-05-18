@@ -6,13 +6,13 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 10:46:45 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/18 11:49:28 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/18 21:58:32 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_num1(int num1, int num2, int num3, int num4)
+void	ft_print_num1(char num1, char num2, char num3, char num4)
 {
 	write(1, &num1, 1);
 	write(1, &num2, 1);

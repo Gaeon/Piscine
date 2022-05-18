@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 17:49:14 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/18 21:58:33 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/18 19:16:03 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/18 21:58:25 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int	len;
+	int	i;
 
-	len = 0;
-	while(str[len] != '\0')
-		len++;
-	return (len);
+	i = 0;
+	while(src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
