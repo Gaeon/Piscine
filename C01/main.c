@@ -7,6 +7,8 @@
 #include "ex04/ft_ultimate_div_mod.c"
 #include "ex05/ft_putstr.c"
 #include "ex06/ft_strlen.c"
+#include "ex07/ft_rev_int_tab.c"
+#include "ex08/ft_sort_int_tab.c"
 
 int main()
 {
@@ -41,5 +43,39 @@ int main()
 	printf("%d", ft_strlen(str));
 	printf("\n\n");
 	
+	int tab[5] = {1, 2, 3, 4, 5};
+	int size = 5;
+	int i = 0;
+	printf("Before: ");
+	while(i < 5)
+	{
+		printf("%d ", tab[i]);
+		i++;
+	}
+	i = 0;
+	ft_rev_int_tab(tab, size);
+	printf("\nAfter : ");
+	while(i < 5)
+	{
+		printf("%d ", tab[i]);
+		i++;
+	}
+	printf("\n\n");
 
+	int tab1[5] = {4, 5, 1, 3, 2};
+	i = 0;
+	printf("Before: ");
+	while(i < 5)
+	{
+		printf("%d ", tab1[i]);
+		i++;
+	}
+	i = 0;
+	ft_sort_int_tab(tab1, size);
+	printf("\nAfter : ");
+	while(i < 5)
+	{
+		printf("%d ", tab1[i]);
+		i++;
+	}
 }
