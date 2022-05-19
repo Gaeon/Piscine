@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 10:20:52 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/19 18:47:42 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/19 17:01:24 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/19 17:59:41 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strupcase(char *str)
 {
-	write (1, &c, 1);
+	while (str != '\0')
+	{
+		if(str >= 'a' && str <= 'z')
+			str -= 32;
+		str++;
+	}
+	return (str);
 }

@@ -15,7 +15,7 @@ int main()
 	}
 	{
 		char dest[8];
-		char src[10] = "hi hello!";
+		char src1[11] = "hi hello!";
 		printf("%s %s", strncpy(dest, src1, 3), ft_strncpy(dest, src1, 3));
 		printf("%s %s", strncpy(dest, src1, 8), ft_strncpy(dest, src1, 8));
 	}

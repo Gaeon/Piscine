@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 10:20:52 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/19 18:47:42 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/19 17:07:01 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/19 17:59:43 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+char	*ft_strlowcase(char *str)
 {
-	write (1, &c, 1);
+	while (str != '\0')
+	{
+		if(str >= 'A' && str <= 'Z')
+			str += 32;
+		str++;
+	}
+	return (str);
 }

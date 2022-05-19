@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 10:20:52 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/19 18:47:42 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/19 16:00:03 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/19 17:59:49 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+int	ft_str_is_printable(char *str)
 {
-	write (1, &c, 1);
+	if (str[0]=='\0')
+		return (0);
+	while (str != 0)
+	{
+		if((str >= 33 && str <= 126) || str == ' ')
+			continue ;
+		else
+			return (0);
+		str++;	
+	}
+	return (1);
 }
