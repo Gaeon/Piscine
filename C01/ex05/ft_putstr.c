@@ -6,17 +6,17 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 17:45:15 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/18 22:19:38 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/19 14:08:53 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr(char *c)
+void	ft_putstr(char *str)
 {
-	while (*c != '\0')
+	while (*str != '\0')
 	{
-		write(1, c, 1);
-		c++;
+		write(1, str, 1);
+		str++;
 	}
 }
