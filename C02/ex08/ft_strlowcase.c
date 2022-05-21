@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:07:01 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/19 17:59:43 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 12:31:33 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ char	*ft_strlowcase(char *str)
 {
 	while (str != '\0')
 	{
-		if(str >= 'A' && str <= 'Z')
+		if (str >= 'A' && str <= 'Z')
 			str += 32;
 		str++;
 	}
