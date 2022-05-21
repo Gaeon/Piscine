@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 12:39:17 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 18:23:14 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 18:58:00 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,8 @@ void	non_printable(char c)
 void	ft_putstr_non_printable(char *str)
 {
 	int	idx;
-	int	cnt;
 
 	idx = 0;
-	cnt = 0;
 	while (str[idx] != '\0')
 	{
 		if (str[idx] >= 32 && str[idx] <= 126)
