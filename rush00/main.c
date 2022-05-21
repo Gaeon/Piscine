@@ -6,11 +6,29 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:02:10 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 12:06:40 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 13:56:03 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	rush(int x, int y);
+
+int	ft_atoi(char *str)
+{
+	int	idx;
+	int	ret;
+
+	idx = 0;
+	ret = 0;
+	while (str[idx] != '\0')
+	{
+		if (str[idx] >= '0' && str[idx] <= '9')
+			ret = ret * 10 + str[idx] - '0';
+		else
+			return (0);
+		idx++;
+	}
+	return (ret);
+}
 
 int	main(int argc, char *argv[])
 {
@@ -20,16 +38,8 @@ int	main(int argc, char *argv[])
 
 	if (argc != 3)
 		return (0);
-	idx = 0;
-	x = 0;
-	y = 0;
-	if (argv[1][0] == '-' || argv[2][0] == '-')
-		return (0);
-	while (idx < 10 && argv[1][idx] != '\0')
-		x = x * 10 + argv[1][idx++] - '0';
-	idx = 0;
-	while (idx < 10 && argv[2][idx] != '\0')
-		y = y * 10 + argv[2][idx++] - '0';
+	x = ft_atoi(argv[1]);
+	y = ft_atoi(argv[2]);
 	rush (x, y);
 	return (0);
 }
