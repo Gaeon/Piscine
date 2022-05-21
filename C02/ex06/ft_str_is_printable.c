@@ -6,18 +6,18 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 16:00:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 12:33:03 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 15:32:21 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_printable(char *str)
 {
 	if (str[0] == '\0')
-		return (0);
-	while (str != 0)
+		return (1);
+	while (*str != '\0')
 	{
-		if ((str >= 33 && str <= 126) || str == ' ')
-			continue ;
+		if ((*str >= 33 && *str <= 126) || *str == ' ')
+			;
 		else
 			return (0);
 		str++;

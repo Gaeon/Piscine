@@ -6,17 +6,17 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:58:42 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 12:31:24 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 15:11:26 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+int	ft_str_is_uppercase(char *str)
 {
 	if (str[0] == '\0')
 		return (1);
-	while (str != '\0')
+	while (*str != '\0')
 	{
-		if (str <= 'A' || str >= 'Z')
+		if (*str < 'A' || *str > 'Z')
 			return (0);
 		str++;
 	}

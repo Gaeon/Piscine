@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/19 15:38:09 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 15:08:13 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/21 14:08:24 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/21 14:09:56 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+#include <unistd.h>
+
+void	*ft_print_memory(void *addr, unsigned int size)
 {
-	while (*str != '\0')
-	{
-		if (*str >= 'a' && *str <= 'z')
-			;
-		else if (*str >= 'A' && *str <= 'Z')
-			;
-		else
-			return (0);
-		str++;
-	}
-	return (1);
+	write(1, "1", 1);
 }

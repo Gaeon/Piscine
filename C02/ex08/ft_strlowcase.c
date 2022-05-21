@@ -6,17 +6,21 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 17:07:01 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 12:31:33 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 15:33:59 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strlowcase(char *str)
 {
-	while (str != '\0')
+	int	len;
+
+	len = 0;
+	while (*str != '\0')
 	{
-		if (str >= 'A' && str <= 'Z')
-			str += 32;
+		if (*str >= 'A' && *str <= 'Z')
+			*str += 32;
 		str++;
+		len++;
 	}
-	return (str);
+	return (str - len);
 }

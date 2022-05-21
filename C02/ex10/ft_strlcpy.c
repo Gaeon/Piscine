@@ -6,21 +6,27 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 12:27:11 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 12:35:21 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 16:42:37 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	i;
+	unsigned int	len;
 
 	i = 0;
-	while (src != '\0' || size > 1)
+	len = 0;
+	while (src[len] != '\0')
+		len++;
+	if (size != 0)
 	{
-		dest[i] = src[i];
-		i++;
-		size++;
+		while (src[i] != '\0' || size - 1 > i)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
-	return (i);
+	return (len);
 }
