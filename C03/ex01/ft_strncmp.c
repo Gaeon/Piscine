@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 18:37:36 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 18:43:56 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 18:57:58 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 		if (s1[idx] == '\0' || s2[idx] == '\0')
 		{
 			if (s1[idx] == '\0')
-			return ('\0' - (unsigned char)s2[idx]);
+				return ('\0' - (unsigned char)s2[idx]);
 			else if (s2[idx] == '\0')
 				return ((unsigned char)s1[idx] - '\0');
 			else
