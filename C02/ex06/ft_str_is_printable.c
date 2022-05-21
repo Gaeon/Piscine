@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 16:00:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 15:32:21 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/21 18:20:24 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_printable(char *str)
 		return (1);
 	while (*str != '\0')
 	{
-		if ((*str >= 33 && *str <= 126) || *str == ' ')
+		if ((*str >= 32 && *str <= 126) || *str == ' ')
 			;
 		else
 			return (0);
