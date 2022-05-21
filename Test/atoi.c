@@ -1,6 +1,8 @@
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int	atoi(char *c)
+int	ft_atoi(char *c)
 {
 	int	idx;
 	int	sign;
@@ -9,8 +11,6 @@ int	atoi(char *c)
 	idx = 0;
 	sign = 1;
 	ret = 0;
-	while(c[idx] <= 32)
-		idx++;
 	while(c[idx] == '+' || c[idx] == '-')
 	{
 		if(c[idx] == '-')
@@ -23,4 +23,10 @@ int	atoi(char *c)
 		idx++;
 	}
 	return (sign * ret);
+}
+
+int main()
+{
+	char str[10] ="  123";
+	printf("%d %d", atoi(str), ft_atoi(str));
 }
