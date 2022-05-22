@@ -27,6 +27,7 @@ int main()
 		char s4[10] = "gdcxf";
 		printf("%d %d\n", strncmp(s1, s2, 6), ft_strncmp(s1, s2, 6));
 		printf("%d %d\n", strncmp(s1, s2, 7), ft_strncmp(s1, s2, 7));
+		printf("%d %d\n", strncmp(s1, s2, 8), ft_strncmp(s1, s2, 8));
 		printf("%d %d\n", strncmp(s3, s4, 1), ft_strncmp(s3, s4, 1));
 	}
 	{
