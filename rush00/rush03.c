@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:02:13 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 12:10:05 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/22 14:49:28 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	ft_print_line(char begin, char mid, char end, int x)
 		ft_putchar(mid);
 		idx++;
 	}
-	ft_putchar(end);
+	if (idx < x)
+		ft_putchar(end);
 	ft_putchar('\n');
 }
 
@@ -40,5 +41,6 @@ void	rush(int x, int y)
 		ft_print_line('B', ' ', 'B', x);
 		idx++;
 	}
-	ft_print_line('A', 'B', 'C', x);
+	if (idx < y)
+		ft_print_line('A', 'B', 'C', x);
 }

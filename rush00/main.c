@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 11:02:10 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 13:56:03 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/22 14:51:47 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(int argc, char *argv[])
 {
 	int	x;
 	int	y;
-	int	idx;
 
 	if (argc != 3)
 		return (0);
