@@ -6,14 +6,14 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 18:49:28 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 18:57:57 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/22 13:52:06 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int	len;
-	int idx;
+	int	idx;
 
 	len = 0;
 	idx = 0;
