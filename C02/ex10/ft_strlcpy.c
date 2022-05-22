@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 12:27:11 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 18:58:03 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/22 19:23:57 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		len++;
 	if (size != 0)
 	{
-		while (src[i] != '\0' || size - 1 > i)
+		while (src[i] != '\0' && size - 1 > i)
 		{
 			dest[i] = src[i];
 			i++;
 		}
-	}
-	if (size != 0)
 		dest[i] = '\0';
+	}
 	return (len);
 }

@@ -6,13 +6,13 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 12:39:17 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/21 18:58:00 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/22 19:23:59 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	non_printable(char c)
+void	non_printable(unsigned char c)
 {
 	char	arr[2];
 
@@ -24,7 +24,8 @@ void	non_printable(char c)
 
 void	ft_putstr_non_printable(char *str)
 {
-	int	idx;
+	int				idx;
+	unsigned char	c;
 
 	idx = 0;
 	while (str[idx] != '\0')
@@ -32,7 +33,10 @@ void	ft_putstr_non_printable(char *str)
 		if (str[idx] >= 32 && str[idx] <= 126)
 			write(1, &str[idx], 1);
 		else
-			non_printable(str[idx]);
+		{
+			c = str[idx];
+			non_printable(c);
+		}
 		idx++;
 	}
 }
