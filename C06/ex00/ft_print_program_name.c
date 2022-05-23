@@ -1,43 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/21 12:27:11 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 18:45:33 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/23 14:16:26 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/23 15:46:17 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	len;
+#include <unistd.h>
 
-	i = 0;
-	len = 0;
-	while (src[len] != '\0')
-		len++;
-	if (size != 0)
-	{
-		while (src[i] != '\0' && size - 1 > i)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (len);
-}
-
-int main()
+int	main(int argc, char *argv[])
 {
-	int i = 0 ;
-	int size = 5;
-	while(i < size - 1)
+	if (argc < 1)
+		return (0);
+	while (*argv[0] != '\0')
 	{
-		i++;
+		write(1, argv[0], 1);
+		argv[0]++;
 	}
-	printf("%d", i);
+	return (0);
 }

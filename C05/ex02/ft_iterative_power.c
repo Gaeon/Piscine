@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/21 12:27:11 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 18:45:33 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/22 20:47:48 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/23 20:11:33 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_iterative_power(int nb, int power)
 {
-	unsigned int	i;
-	unsigned int	len;
+	int	ret;
 
-	i = 0;
-	len = 0;
-	while (src[len] != '\0')
-		len++;
-	if (size != 0)
+	ret = 1;
+	if (nb < 0)
+		return (0);
+	else if (nb == 0 && power == 0)
+		return (1);
+	while (power > 0)
 	{
-		while (src[i] != '\0' && size - 1 > i)
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
+		ret *= nb;
+		power--;
 	}
-	return (len);
-}
-
-int main()
-{
-	int i = 0 ;
-	int size = 5;
-	while(i < size - 1)
-	{
-		i++;
-	}
-	printf("%d", i);
+	return (ret);
 }
