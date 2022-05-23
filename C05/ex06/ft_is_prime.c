@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 10:51:34 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 15:32:00 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/23 21:15:31 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_is_prime(int nb)
 		return (0);
 	while (num * num <= nb && num < 46341)
 	{
-		if(nb % num == 0)
+		if (nb % num == 0)
 			return (0);
 		num++;
 	}

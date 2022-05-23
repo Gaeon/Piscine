@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:12:29 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 20:11:50 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/23 21:15:51 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ int	is_valid(char *arr, int col)
 	i = -1;
 	while (++i < col)
 	{
-		if (arr[i] == arr[col]) // 같은 열에 놓인 경우
+		if (arr[i] == arr[col])
 			return (0);
-		else if (col - i == arr[col] - arr[i]) // 대각선에 놓인 경우
+		else if (col - i == arr[col] - arr[i])
 			return (0);
-		else if (col - i == arr[i] - arr[col]) // 대각선에 놓인 경우
+		else if (col - i == arr[i] - arr[col])
 			return (0);
 	}
 	return (1);
