@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 14:08:24 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 21:21:34 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/24 16:43:06 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,14 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	}
 	return (addr);
 }
+
+int main()
+{
+		printf("======ex11======\n");
+		char str[10] = "abcdef ? ";
+		char str1[30] = "Coucou\ntu vas bien ?";
+		ft_putstr_non_printable(str);
+		printf("\n");
+		ft_putstr_non_printable(str1);
+		printf("\n");
+	}
