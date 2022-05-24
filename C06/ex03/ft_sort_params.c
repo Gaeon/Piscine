@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 14:22:41 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 15:46:53 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/24 17:14:31 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char *argv[])
 	while (++i < argc)
 	{
 		j = 0;
-		while (++j < argc - i - 1)
+		while (++j < argc - i)
 		{
 			if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 				ft_swap(&argv[j], &argv[j + 1]);
