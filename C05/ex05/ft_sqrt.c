@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 20:58:05 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 21:14:41 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/24 15:28:12 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_sqrt(int nb)
 	num = 1;
 	if (nb < 0)
 		return (0);
+	if (nb == 1)
+		return (1);
 	while (num <= nb / 2 && num < 46341)
 	{
 		if (num * num == nb)
