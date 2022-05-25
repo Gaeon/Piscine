@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 14:08:24 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/24 16:43:06 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/25 21:08:24 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,15 @@ void	ft_rec_hex(unsigned long long nbr)
 	}
 }
 
-void	to_hex(unsigned char c)
+void	to_hex(unsigned char c, int idx)
 {
 	char	arr[2];
 
 	arr[0] = "0123456789abcdef"[c / 16];
 	arr[1] = "0123456789abcdef"[c % 16];
 	write(1, arr, 2);
+	if (idx % 2 == 0)
+		write(1, " ", 1);
 }
 
 void	*ft_print_memory(void *addr, unsigned int size)
@@ -47,14 +49,10 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	while (size >= 0)
 	{
 		ft_rec_hex((unsigned long long)temp);
-		write(1, ": ", 2);
+		write(1, ":", 2);
 		idx = -1;
 		while (++idx < 16)
-		{
-			to_hex(temp[idx]);
-			if (idx % 2 == 0)
-				write(1, " ", 1);
-		}
+			to_hex(temp[idx], idx);
 		idx = -1;
 		while (++idx < 16)
 		{
@@ -69,14 +67,3 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	}
 	return (addr);
 }
-
-int main()
-{
-		printf("======ex11======\n");
-		char str[10] = "abcdef ? ";
-		char str1[30] = "Coucou\ntu vas bien ?";
-		ft_putstr_non_printable(str);
-		printf("\n");
-		ft_putstr_non_printable(str1);
-		printf("\n");
-	}
