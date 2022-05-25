@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 21:20:32 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/23 21:21:20 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/25 11:51:57 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,10 @@ int main()
 	{
 		printf("======ex02======\n");
 		printf("0 : %d\n", ft_iterative_power(-1, -1));
-		printf("0 : %d\n", ft_iterative_power(-1, 2));
+		printf("1 : %d\n", ft_iterative_power(-1, 2));
+		printf("0 : %d\n", ft_iterative_power(2, -1));
+		printf("1 : %d\n", ft_iterative_power(2, 0));
+		printf("0 : %d\n", ft_iterative_power(0, 2));
 		printf("1 : %d\n", ft_iterative_power(0, 0));
 		printf("4 : %d\n", ft_iterative_power(2, 2));
 		printf("-251658240 : %d\n", ft_iterative_power(12, 12));
@@ -50,7 +53,10 @@ int main()
 	{
 		printf("======ex03======\n");
 		printf("0 : %d\n", ft_recursive_power(-1, -1));
-		printf("0 : %d\n", ft_recursive_power(-1, 2));
+		printf("1 : %d\n", ft_recursive_power(-1, 2));
+		printf("0 : %d\n", ft_recursive_power(2, -1));
+		printf("2 : %d\n", ft_recursive_power(2, 0));
+		printf("0 : %d\n", ft_recursive_power(0, 2));
 		printf("1 : %d\n", ft_recursive_power(0, 0));
 		printf("4 : %d\n", ft_recursive_power(2, 2));
 		printf("-251658240 : %d\n", ft_recursive_power(12, 12));
