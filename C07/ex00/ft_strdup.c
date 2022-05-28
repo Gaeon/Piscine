@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 10:28:19 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 19:04:55 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/26 13:44:54 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strdup(char *src)
 	int		len;
 	char	*dup;
 
-	len = strlen(src);
+	len = ft_strlen(src);
 	dup = (char *)malloc(sizeof(char) * (len + 1));
-	if (dup == '\0')
+	if (dup == 0)
 		return (0);
 	len = 0;
 	while (src[len] != '\0')

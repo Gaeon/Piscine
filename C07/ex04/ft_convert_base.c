@@ -6,11 +6,14 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:27:00 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 19:04:42 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/26 15:03:53 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+int		ft_atoi_base(char *str, char *base, int base_num);
+char	*ft_itoa_base(int str, char *base, int base_num);
 
 int	ft_check_base(char *str)
 {
@@ -18,7 +21,7 @@ int	ft_check_base(char *str)
 	int	idx;
 
 	len = 0;
-	while (str[len] != '\0')
+	while (str[len] != 0)
 	{
 		idx = 0;
 		if (str[len] == '-' || str[len] == '+')

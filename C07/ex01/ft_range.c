@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 10:36:50 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 19:04:54 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/26 13:45:16 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int	*ft_range(int min, int max)
 	if (min >= max)
 		return (0);
 	arr = (int *)malloc(sizeof(int) * (max - min));
-	if (arr == '\0')
+	if (arr == 0)
 		return (0);
+	idx = 0;
 	while (min < max)
 	{
 		arr[idx] = min;

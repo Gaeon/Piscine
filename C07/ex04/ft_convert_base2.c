@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:27:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 21:53:38 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/28 15:33:26 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,76 @@ int	ft_atoi_base(char *str, char *base, int base_num)
 	return (sign * ret);
 }
 
-char	*ft_itoa_base(int nbr, char *base, int base_num)
+int	ft_char_len(int str, int base_num)
 {
-	
+	int	len;
+	int	sign;
+
+	len = 0;
+	sign = 1;
+	if (str < 0)
+	{
+		if (str == -2147483548)
+			return (-11);
+		str *= -1;
+		sign = -1;
+	}
+	while (str > 0)
+	{
+		str /= base_num;
+		len++;
+	}
+	len++;
+	return (len * sign);
+}
+
+void	ft_put_nbr(char *ret, int str, char *base, int base_num)
+{
+	int	idx;
+	int	len;
+
+	len = ft_char_len(str, base_num);
+	idx = len - 2;
+	ret[len - 1] = '\0';
+	if (len < 0)
+	{
+		while (idx > 0)
+		{
+			ret[idx] = base[str % base_num];
+			str /= base_num;
+			idx++;
+		}
+	}
+	else
+	{
+		while (idx >= 0)
+		{
+			ret[idx] = base[str % base_num];
+			str /= base_num;
+			idx++;
+		}
+	}
+}
+
+char	*ft_itoa_base(int str, char *base, int base_num)
+{
+	int		len;
+	char	*ret;
+
+	len = ft_char_len(str, base_num);
+	if (len < 0)
+	{
+		ret = (char *)malloc(sizeof(char) * (len + 1));
+		if (ret == 0)
+			return (0);
+		ret[0] = '-';
+	}
+	else
+	{
+		ret = (char *)malloc(sizeof(char) * len);
+		if (ret == 0)
+			return (0);
+	}
+	ft_put_nbr(ret, str, base, base_num);
+	return (ret);
 }

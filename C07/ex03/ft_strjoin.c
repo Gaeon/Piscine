@@ -6,13 +6,13 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:20:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 19:04:45 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/26 13:44:22 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(int size, char **strs, char *sep)
+int	ft_strlen_1(int size, char **strs, char *sep)
 {
 	int	i;
 	int	j;
@@ -69,7 +69,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		ret[0] = '\0';
 		return (ret);
 	}
-	total_len = ft_strlen(size, strs, sep);
+	total_len = ft_strlen_1(size, strs, sep);
 	ret = (char *)malloc(sizeof(char) * total_len + 1);
 	return (ft_cat(size, strs, sep, ret));
 }
