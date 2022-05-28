@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:56:20 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/28 22:05:39 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/28 22:25:09 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,18 +107,11 @@ void	base_backtracking(int *input)
 	if (matrix == 0)
 		return ;
 	while (++i < 4)
-	{
-		matrix[i] = (int *)malloc(sizeof(int) * 4);
-		if (matrix[i] == 0)
-			return ;
 		visit[i] = 0;
-	}
 	comb(arr, visit, 0);
 	backtracking(matrix, input, 0);
 	if (g_flag == 0)
 		print_error(2);
 	i = -1;
-	while (i < 4)
-		free(matrix[i]);
 	free(matrix);
 }
