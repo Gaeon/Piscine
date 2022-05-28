@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 17:09:25 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 22:08:34 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/28 15:33:35 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,20 +89,9 @@ int	ft_atoi_base(char *str, char *base)
 	return (ft_atoi_1(str, base, base_num));
 }
 
-int main()
-{printf("======ex05======\n");
-		char base[20] = "0123456789";
-		char base1[20] = "01";
-		char base2[20] = "0123456789ABCDEF";
-		char base3[20] = "poneyvif";
-		char base4[20] = "poneyviff";
-		printf("%d\n", ft_atoi_base("4523816", base));
-		printf("%d\n", ft_atoi_base("10001010000011100101000", base1));
-		printf("%d\n", ft_atoi_base("450728", base2));
-		printf("%d\n", ft_atoi_base("nonpeyvp", base3));
-		printf("%d\n", ft_atoi_base("nonpeyvp", base4));
-		printf("%d\n", ft_atoi_base("-2147483648", base));
-		printf("%d\n", ft_atoi_base("-10000000000000000000000000000000", base1));
-		printf("%d\n", ft_atoi_base("-80000000", base2));
-		printf("%d\n", ft_atoi_base("-npppppppppp", base3));
-	}
+123
+
+ 1
+ 1 * 10 + 2
+ 12 * 10 + 3
+ 123

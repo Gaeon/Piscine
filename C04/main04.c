@@ -30,7 +30,7 @@ int main()
 		int str1 = -2147483648;
 		int str2 = 0;
 		int str3 = -0;
-		ft_putnbr(str); printf("치\n");
+		ft_putnbr(str); printf("\n");
 		ft_putnbr(str1); printf("\n");
 		ft_putnbr(str2); printf("\n");
 		ft_putnbr(str3); printf("\n");
