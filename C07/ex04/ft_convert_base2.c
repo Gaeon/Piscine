@@ -6,9 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:27:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/28 15:33:26 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/29 14:54:07 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 int	return_num(char c, char *base, int base_num)
 {
@@ -82,26 +84,19 @@ void	ft_put_nbr(char *ret, int str, char *base, int base_num)
 	int	len;
 
 	len = ft_char_len(str, base_num);
-	idx = len - 2;
-	ret[len - 1] = '\0';
 	if (len < 0)
-	{
-		while (idx > 0)
-		{
-			ret[idx] = base[str % base_num];
-			str /= base_num;
-			idx++;
-		}
-	}
+		idx = (len * -1) - 2;
 	else
+		idx = len - 2;
+	while (idx >= 0)
 	{
-		while (idx >= 0)
-		{
-			ret[idx] = base[str % base_num];
-			str /= base_num;
-			idx++;
-		}
+		if (idx == 0 && len < 0)
+			ret[idx] = '-';
+		ret[idx] = base[str % base_num];
+		str /= base_num;
+		idx--;
 	}
+	ret[len - 1] = '\0';
 }
 
 char	*ft_itoa_base(int str, char *base, int base_num)
@@ -111,18 +106,11 @@ char	*ft_itoa_base(int str, char *base, int base_num)
 
 	len = ft_char_len(str, base_num);
 	if (len < 0)
-	{
-		ret = (char *)malloc(sizeof(char) * (len + 1));
-		if (ret == 0)
-			return (0);
-		ret[0] = '-';
-	}
+		ret = (char *)malloc(sizeof(char) * (-len + 1));
 	else
-	{
 		ret = (char *)malloc(sizeof(char) * len);
-		if (ret == 0)
-			return (0);
-	}
+	if (ret == 0)
+		return (0);
 	ft_put_nbr(ret, str, base, base_num);
 	return (ret);
 }
