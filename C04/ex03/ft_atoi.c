@@ -6,9 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 16:22:11 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/28 15:33:38 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 18:03:02 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_atoi(char *str)
 {
@@ -32,5 +34,6 @@ int	ft_atoi(char *str)
 		ret = ret * 10 + str[idx] - '0';
 		idx++;
 	}
+	printf("%d %d\n", ret, sign*ret);
 	return (sign * ret);
 }
