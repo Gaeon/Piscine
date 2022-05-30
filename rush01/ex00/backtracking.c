@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 20:56:20 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/28 22:25:09 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/29 19:12:20 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	double_check(int **matrix, int i);
 int	row_check(int **matrix, int *input, int i);
 int	col_check(int **matrix, int *input);
-int	print_error(int flag);
+int	print_error(void);
 
 static int	g_flag = 0;
 static int	g_cnt = 0;
@@ -65,6 +65,8 @@ void	print_matrix(int **matrix)
 		{
 			temp = matrix[i][j] + '0';
 			write(1, &temp, 1);
+			if (j != 3)
+				write(1, " ", 1);
 		}
 		write(1, "\n", 1);
 	}
@@ -111,7 +113,6 @@ void	base_backtracking(int *input)
 	comb(arr, visit, 0);
 	backtracking(matrix, input, 0);
 	if (g_flag == 0)
-		print_error(2);
-	i = -1;
+		print_error();
 	free(matrix);
 }
