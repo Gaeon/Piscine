@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 10:48:35 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/26 13:48:28 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 17:00:33 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,8 @@ int	ft_ultimate_range(int **range, int min, int max)
 	if (array == 0)
 		return (-1);
 	idx = -1;
-	while (min < max)
-	{
-		array[++idx] = min;
-		min++;
-	}
+	while (++idx < max - min)
+		array[idx] = min + idx;
 	*range = array;
 	return (max - min);
 }

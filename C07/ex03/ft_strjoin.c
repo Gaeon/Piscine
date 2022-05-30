@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:20:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/26 13:44:22 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 18:36:39 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_strlen_1(int size, char **strs, char *sep)
 	int	total_len;
 
 	i = -1;
-	j = -1;
 	sep_len = 0;
 	total_len = 0;
 	while (++i < size)
 	{
+		j = -1;
 		while (strs[i][++j] != '\0')
 			total_len++;
 	}

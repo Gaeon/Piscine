@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 15:01:39 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/26 15:03:52 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 18:34:48 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main()
 	{
 		printf("======ex02======\n");
 		int *arr;
-		printf("%d\n", ft_ultimate_range(&arr, 3, 5));
+		printf("%d\n", ft_ultimate_range(&arr, -1, 5));
 
 	}
 	{
@@ -54,10 +54,10 @@ int main()
 	}
 	{
 		printf("======ex04======\n");
-		char str[5] = "101";
-		char base_form[10] = "01";
-		char base_to[10] = "01234";
-		printf("%s", ft_convert_base(str, base_form, base_to));
+		char str[15] = "-101";
+		char base_form[10] = "01234";
+		char base_to[15] = "0123456789";
+		printf("%s\n", ft_convert_base(str, base_form, base_to));
 
 	}
 	{

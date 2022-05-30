@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 14:47:30 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/29 14:54:08 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 18:36:45 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_check_base(char *str)
 	int	idx;
 
 	len = 0;
-	while (str[len] != 0)
+	while (str[len] != '\0')
 	{
 		idx = 0;
 		if (str[len] == '-' || str[len] == '+')

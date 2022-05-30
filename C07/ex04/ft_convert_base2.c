@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:27:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/29 14:54:07 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 18:37:03 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,21 +57,21 @@ int	ft_atoi_base(char *str, char *base, int base_num)
 
 int	ft_char_len(int str, int base_num)
 {
-	int	len;
-	int	sign;
+	int		len;
+	int		sign;
+	long	num;
 
 	len = 0;
 	sign = 1;
-	if (str < 0)
+	num = (long)str;
+	if (num < 0)
 	{
-		if (str == -2147483548)
-			return (-11);
-		str *= -1;
+		num *= -1;
 		sign = -1;
 	}
-	while (str > 0)
+	while (num > 0)
 	{
-		str /= base_num;
+		num /= base_num;
 		len++;
 	}
 	len++;
@@ -80,23 +80,31 @@ int	ft_char_len(int str, int base_num)
 
 void	ft_put_nbr(char *ret, int str, char *base, int base_num)
 {
-	int	idx;
-	int	len;
+	int		idx;
+	int		len;
+	long	num;
 
 	len = ft_char_len(str, base_num);
+	num = (long)str;
 	if (len < 0)
-		idx = (len * -1) - 2;
+	{
+		idx = (len * -1) - 1;
+		num *= -1;
+	}
 	else
 		idx = len - 2;
+	ret[idx - 1] = '\0';
 	while (idx >= 0)
-	{
+	{	
 		if (idx == 0 && len < 0)
+		{
 			ret[idx] = '-';
-		ret[idx] = base[str % base_num];
-		str /= base_num;
+			break ;
+		}
+		ret[idx] = base[num % base_num];
+		num /= base_num;
 		idx--;
 	}
-	ret[len - 1] = '\0';
 }
 
 char	*ft_itoa_base(int str, char *base, int base_num)
