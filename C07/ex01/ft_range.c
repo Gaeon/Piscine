@@ -6,11 +6,12 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 10:36:50 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/26 13:45:16 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 17:35:35 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	*ft_range(int min, int max)
 {
@@ -23,11 +24,10 @@ int	*ft_range(int min, int max)
 	if (arr == 0)
 		return (0);
 	idx = 0;
-	while (min < max)
+	while (idx < max -  min)
 	{
-		arr[idx] = min;
+		arr[idx] = min + idx;
 		idx++;
-		min++;
 	}
 	return (arr);
 }

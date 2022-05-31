@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 14:20:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/30 18:36:39 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 17:35:28 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 
 	if (size == 0)
 	{
-		ret = (char *)malloc(sizeof(char) * 0);
+		ret = (char *)malloc(sizeof(char));
 		ret[0] = '\0';
 		return (ret);
 	}
