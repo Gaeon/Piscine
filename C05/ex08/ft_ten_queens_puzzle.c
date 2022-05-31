@@ -6,11 +6,12 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:12:29 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 20:59:06 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 19:49:20 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 static int	g_cnt = 0;
 

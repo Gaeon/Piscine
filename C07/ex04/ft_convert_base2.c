@@ -6,11 +6,12 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 12:27:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 17:09:18 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 20:01:49 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
 int	return_num(char c, char *base, int base_num)
 {

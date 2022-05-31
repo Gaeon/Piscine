@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 00:15:53 by jeongble          #+#    #+#             */
-/*   Updated: 2022/05/31 21:15:09 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 22:41:54 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,20 @@ int	main(void)
 		*(av + 2) = "BABO";
 		strts = ft_strs_to_tab(3, av);
 		printf("--------- output ---------\n");
-		printf("JEONGBLE\nBABO\n");
+		printf("JEONGBLE\nBABO\n");vi 
 		printf("------ user  output ------\n");
 		ft_show_tab(strts);
 		printf("\n===============FIN===============\n\n");
 	}
 	return (0);
 }
+
+char j[9] = jeongble
+char *str = (char *)malloc(sizeof(char) * 9);
+while (j != '\0')
+{
+	str[i]= j[i];
+	i++;
+}
+
+copy = str;
