@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*   ft_strs_to_tab.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 15:17:38 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 16:13:40 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/05/30 19:04:33 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/05/31 16:10:28 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_BOOLEAN_H
-# define FT_BOOLEAN_H
+#ifndef FT_STRS_TO_TAB_H
+# define FT_STRS_TO_TAB_H
 
-# include <unistd.h>
-
-typedef int	t_bool;
-
-# define EVEN_MSG "I have an even number of arguments."
-# define ODD_MSG "I have an odd number of arguments."
-# define EVEN(nbr) (nbr % 2 == 0)
-# define TRUE 1
-# define FALSE 0
-# define SUCCESS 0
+typedef struct ft_strs_to_tab
+{
+	int		size;
+	char	*str;
+	char	*copy;
+}	t_stock_str;
 
 #endif

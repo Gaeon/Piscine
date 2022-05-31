@@ -6,17 +6,17 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 15:31:42 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/29 15:33:41 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/30 19:54:51 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
-typedef	struct s_point
+typedef struct s_point
 {
 	int	x;
 	int	y;
-}t_point;
+}	t_point;
 
 #endif
