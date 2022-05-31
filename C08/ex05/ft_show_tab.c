@@ -6,12 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:15:51 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 16:39:08 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 19:54:47 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_strs_to_tab.h"
 
 void	ft_putstr(char *str)
 {
@@ -70,7 +69,7 @@ void	ft_show_tab(struct s_stock_str *par)
 	int	i;
 
 	i = 0;
-	while (par[i].str != 0)
+	while (par[i].str)
 	{
 		ft_putstr(par[i].str);
 		write(1, "\n", 1);

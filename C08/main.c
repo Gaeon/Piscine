@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 00:15:53 by jeongble          #+#    #+#             */
-/*   Updated: 2022/05/31 16:40:13 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 17:43:38 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "ex03/ft_point.h"
 #include "ex04/ft_strs_to_tab.c"
 #include "ex05/ft_show_tab.c"
-
 #include <stdio.h>
 
 int	main(void)
@@ -53,7 +52,7 @@ int	main(void)
 		t_stock_str	*strts;
 		char	*av[3];
 
-		*(av + 0) = "JEONGBLE";	
+		*(av + 0) = "JEONGBLE";
 		*(av + 1) = "IS";
 		*(av + 2) = "BABO";
 		strts = ft_strs_to_tab(3, av);
@@ -64,4 +63,4 @@ int	main(void)
 		printf("\n===============FIN===============\n\n");
 	}
 	return (0);
-}	
+}
