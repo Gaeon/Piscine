@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 15:34:01 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 16:58:32 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/05/31 22:16:25 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 	t_stock_str	*arr;
 
 	i = 0;
-	arr = (t_stock_str *)malloc(sizeof(t_stock_str) * ac);
+	arr = (t_stock_str *)malloc(sizeof(t_stock_str) * (ac + 1));
 	if (arr == 0)
 		return (0);
 	while (i < ac)
