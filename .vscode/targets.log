@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Tue May 31 22:41:54 2022
+# Make data base, printed on Wed Jun  1 10:49:14 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000ct_h0036km/T/vscode-ipc-8e0e639e-dbe7-4557-a1b1-0d53452e8ec8.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000ct_h0036km/T/vscode-ipc-04a20579-7a68-4af4-8717-856f7fb74d3e.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -53,7 +53,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.LDAhdELWv4/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.M4GRizPv7k/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -73,7 +73,7 @@ VSCODE_CODE_CACHE_PATH = /Users/gaeokim/Library/Application Support/Code/CachedD
 # environment
 LOGNAME = gaeokim
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/gaeokim/.oh-my-zsh
 # environment
@@ -115,7 +115,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2388
+XPC_SERVICE_NAME = com.microsoft.VSCode.2340
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -136,12 +136,13 @@ LC_ALL = C
 SUFFIXES := 
 # default
 .INCLUDE_DIRS = /usr/local/include
+ 
 # environment
 MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 2232
+VSCODE_PID = 47101
 # variable set hash-table stats:
 # Load=64/1024=6%, Rehash=0, Collisions=1/85=1%
 
@@ -151,9 +152,9 @@ VSCODE_PID = 2232
 
 # Directories
 
-# . (device 16777225, inode 37521): 21 files, no impossibilities.
+# . (device 16777225, inode 37521): 20 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -225,6 +226,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Tue May 31 22:41:54 2022
+# Finished Make data base on Wed Jun  1 10:49:14 2022
 
  
