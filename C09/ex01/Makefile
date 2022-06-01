@@ -6,7 +6,7 @@
 #    By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 20:16:54 by gaeokim           #+#    #+#              #
-#    Updated: 2022/05/31 22:51:34 by gaeokim          ###   ########.fr        #
+#    Updated: 2022/06/01 20:59:00 by gaeokim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ INC = ./includes/
 DIR = ./srcs/
 HEADER  = $(INC)ft.h
 SRCS = $(DIR)ft_putchar.c $(DIR)ft_swap.c $(DIR)ft_putstr.c $(DIR)ft_strlen.c $(DIR)ft_strcmp.c
-OBJS = ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
-all : ${NAME}
+all : $(NAME)
 
 .c.o :
 	$(CC) $(CFLAG) -c $< -I $(INC) -o $(<:.c=.o)
