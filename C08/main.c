@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 00:15:53 by jeongble          #+#    #+#             */
-/*   Updated: 2022/05/31 22:41:54 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/01 12:25:46 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include "ex04/ft_strs_to_tab.c"
 #include "ex05/ft_show_tab.c"
 #include <stdio.h>
+
+
 
 int	main(void)
 {
@@ -57,20 +59,10 @@ int	main(void)
 		*(av + 2) = "BABO";
 		strts = ft_strs_to_tab(3, av);
 		printf("--------- output ---------\n");
-		printf("JEONGBLE\nBABO\n");vi 
+		printf("JEONGBLE\n8\nJEONGBLE\nIS\n2\nIS\nBABO\n4\nBABO");
 		printf("------ user  output ------\n");
 		ft_show_tab(strts);
 		printf("\n===============FIN===============\n\n");
 	}
 	return (0);
 }
-
-char j[9] = jeongble
-char *str = (char *)malloc(sizeof(char) * 9);
-while (j != '\0')
-{
-	str[i]= j[i];
-	i++;
-}
-
-copy = str;

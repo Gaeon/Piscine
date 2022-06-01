@@ -6,12 +6,12 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 15:34:01 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 22:16:25 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/01 12:24:34 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ft_strs_to_tab.h"
+#include "ft_stock_str.h"
 
 int	ft_strlen(char *src)
 {

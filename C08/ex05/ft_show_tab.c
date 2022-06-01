@@ -6,11 +6,12 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 20:15:51 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 19:54:47 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/01 12:24:32 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "ft_stock_str.h"
 
 void	ft_putstr(char *str)
 {
