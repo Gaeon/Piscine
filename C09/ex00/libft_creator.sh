@@ -6,10 +6,10 @@
 #    By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/31 20:05:17 by gaeokim           #+#    #+#              #
-#    Updated: 2022/05/31 22:37:57 by gaeokim          ###   ########.fr        #
+#    Updated: 2022/06/01 10:54:43 by gaeokim          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #!/bin/bash
 gcc -Wall -Werror -Wextra -c *.c
-ar rscv libft.a *.o
+ar rc libft.a *.o
