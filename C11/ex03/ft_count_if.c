@@ -6,11 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:09:34 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:33:49 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 12:10:41 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int(*f)(char*))
+int	ft_count_if(char **tab, int length, int (*f)(char*))
 {
 	int	i;
 	int	cnt;

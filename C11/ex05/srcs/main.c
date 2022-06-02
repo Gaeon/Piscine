@@ -6,11 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:16:36 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:23:18 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:51:34 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "do_op.h"
+#include "ft_do_op.h"
 
 char	ft_valid_op(char c)
 {
@@ -22,8 +22,8 @@ char	ft_valid_op(char c)
 
 void	ft_calc(int num1, int num2, char oper)
 {
-	void 	(*f[5])(int, int);
-	char 	op[6];
+	void	(*f[5])(int, int);
+	char	op[6];
 	int		i;
 
 	f[0] = add;
@@ -39,7 +39,7 @@ void	ft_calc(int num1, int num2, char oper)
 	i = 0;
 	while (op[i] != 0)
 	{
-		if(op[i] == oper)
+		if (op[i] == oper)
 		{
 			f[i](num1, num2);
 			break ;
@@ -48,7 +48,7 @@ void	ft_calc(int num1, int num2, char oper)
 	}
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	int		num1;
 	int		num2;

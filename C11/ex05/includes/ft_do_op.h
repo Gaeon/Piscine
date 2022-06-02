@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operator.c                                         :+:      :+:    :+:   */
+/*   ft_do_op.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 18:52:43 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:09:44 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/01 18:46:47 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/02 11:49:13 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "do_op.h"
+#ifndef FT_DO_OP_H
+# define FT_DO_OP_H
 
-void add (int num1, int num2)
-{
-	ft_putnbr(num1 + num2);
-}
+# include <unistd.h>
 
-void sub(int num1, int num2)
-{
-	ft_putnbr(num1 - num2);
-}
+# define DIV_MSG "Stop : division by zero"
+# define MOD_MSG "Stop : modulo by zero"
 
-void mul(int num1, int num2)
-{
-	ft_putnbr(num1 * num2);
-}
+int		ft_atoi(char *str);
+void	ft_print(int nb);
+void	ft_putnbr(int nb);
+void	ft_putstr(char *str);
 
-void div(int num1, int num2)
-{
-	if (num2 == 0)
-		ft_putstr(DIV_MSG);
-	else
-		ft_putnbr(num1 / num2);	
-}
+void	add(int num1, int num2);
+void	sub(int num1, int num2);
+void	mul(int num1, int num2);
+void	div(int num1, int num2);
+void	mod(int num1, int num2);
 
-void mod(int num1, int num2)
-{
-	if (num2 == 0)
-		ft_putstr(MOD_MSG);
-	else
-		ft_putnbr(num1 % num2);
-}
+#endif

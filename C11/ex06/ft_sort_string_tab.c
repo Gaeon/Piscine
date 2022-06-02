@@ -6,14 +6,14 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 11:23:50 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:32:13 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:52:16 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(char **str1, char **str2)
 {
 	char	*temp;
-	
+
 	temp = *str1;
 	*str1 = *str2;
 	*str2 = temp;

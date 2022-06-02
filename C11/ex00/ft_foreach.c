@@ -6,11 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 15:26:38 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/01 18:12:58 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:43:04 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_foreach(int *tab, int length, void(*f)(int))
+void	ft_foreach(int *tab, int length, void (*f)(int))
 {
 	int	i;
 

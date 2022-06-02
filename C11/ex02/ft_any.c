@@ -6,11 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:07:08 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/01 18:12:54 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:54:14 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int(*f)(char*))
+int	ft_any(char **tab, int (*f)(char*))
 {
 	int	i;
 

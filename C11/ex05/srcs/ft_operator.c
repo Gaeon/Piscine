@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
+/*   ft_operator.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 18:12:10 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 12:10:48 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/01 18:52:43 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/02 11:50:39 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_is_sort(int *tab, int length, int (*f)(int, int))
-{
-	int	i;
-	int	res;
+#include "ft_do_op.h"
 
-	i = 0;
-	while (f(tab[i], tab[i + 1] == 0))
-		i++;
-	res = f(tab[i], tab[i + 1]);
-	i++;
-	while (i < length)
-	{
-		if (res < 0)
-		{
-			if (f(tab[i], tab[i + 1]) > 0)
-				return (0);
-		}
-		else if (res > 0)
-		{
-			if (f(tab[i], tab[i + 1]) < 0)
-				return (0);
-		}
-		i++;
-	}
-	return (1);
+void	add(int num1, int num2)
+{
+	ft_putnbr(num1 + num2);
+}
+
+void	sub(int num1, int num2)
+{
+	ft_putnbr(num1 - num2);
+}
+
+void	mul(int num1, int num2)
+{
+	ft_putnbr(num1 * num2);
+}
+
+void	div(int num1, int num2)
+{
+	if (num2 == 0)
+		ft_putstr(DIV_MSG);
+	else
+		ft_putnbr(num1 / num2);
+}
+
+void	mod(int num1, int num2)
+{
+	if (num2 == 0)
+		ft_putstr(MOD_MSG);
+	else
+		ft_putnbr(num1 % num2);
 }

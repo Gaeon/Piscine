@@ -6,13 +6,13 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:04:42 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/01 18:12:55 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:54:10 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	*ft_map(int *tab, int length, int(*f)(int))
+int	*ft_map(int *tab, int length, int (*f)(int))
 {
 	int	i;
 
