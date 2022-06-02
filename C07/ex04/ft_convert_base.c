@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 14:47:30 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 17:36:54 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/02 12:25:39 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/02 13:44:42 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_atoi_base(char *str, char *base, int base_num);
-char	*ft_itoa_base(int str, char *base, int base_num);
+int		ft_atoi_base(char *nbr, char *base_from, int f_base_len);
+char	*ft_itoa_base(int nbr, char *base_to, int t_base_len);
 
-int	ft_check_base(char *str)
+int	ft_base_check(char *str)
 {
 	int	len;
 	int	idx;
@@ -25,6 +25,8 @@ int	ft_check_base(char *str)
 	{
 		idx = 0;
 		if (str[len] == '-' || str[len] == '+')
+			return (-1);
+		if ((9 <= str[len] && str[len] <= 13) || str[len] == ' ')
 			return (-1);
 		while (idx < len)
 		{
@@ -41,14 +43,12 @@ int	ft_check_base(char *str)
 
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-	int		base_from_len;
-	int		base_to_len;
-	int		num;
+	int	f_len;
+	int	t_len;
 
-	base_from_len = ft_check_base(base_from);
-	base_to_len = ft_check_base(base_to);
-	if (base_from_len == -1 || base_to_len == -1)
+	f_len = ft_base_check(base_from);
+	t_len = ft_base_check(base_to);
+	if (f_len == -1 || t_len == -1)
 		return (0);
-	num = ft_atoi_base(nbr, base_from, base_from_len);
-	return (ft_itoa_base(num, base_to, base_to_len));
+	return (ft_itoa_base(ft_atoi_base(nbr, base_from, f_len), base_to, t_len));
 }

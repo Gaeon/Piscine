@@ -5,121 +5,105 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/25 12:27:03 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/31 20:01:49 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/02 12:25:42 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/02 14:05:35 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-int	return_num(char c, char *base, int base_num)
+int	ft_char(char nbr, char *base_from, int base_len)
 {
-	int	idx;
+	int	i;
 
-	idx = 0;
-	while (idx < base_num)
+	i = 0;
+	while (i < base_len)
 	{
-		if (c == base[idx])
-			return (idx);
-		idx++;
+		if (nbr == base_from[i])
+			return (i);
+		i++;
 	}
 	return (-1);
 }
 
-int	ft_atoi_base(char *str, char *base, int base_num)
+int	ft_atoi_base(char *nbr, char *base_from, int base_len)
 {
-	int	idx;
-	int	temp;
-	int	sign;
+	int	i;
 	int	ret;
+	int	sign;
 
-	idx = 0;
-	sign = 1;
+	i = 0;
 	ret = 0;
-	while ((9 <= str[idx] && str[idx] <= 13) || str[idx] == 32)
-		idx++;
-	while (str[idx] == '+' || str[idx] == '-')
+	sign = 1;
+	while ((9 <= nbr[i] && nbr[i] <= 13) || nbr[i] == ' ')
+		i++;
+	while (nbr[i] == '+' || nbr[i] == '-')
 	{
-		if (str[idx] == '-')
+		if (nbr[i] == '-')
 			sign *= -1;
-		idx++;
+		i++;
 	}
-	while (str[idx] != '\0')
+	while (nbr[i] != '\0')
 	{
-		temp = return_num(str[idx], base, base_num);
-		if (temp == -1)
+		if (ft_char(nbr[i], base_from, base_len) == -1)
 			break ;
-		ret = ret * base_num + temp;
-		idx++;
+		ret = ret * base_len + ft_char(nbr[i], base_from, base_len);
+		i++;
 	}
-	return (sign * ret);
+	return (ret * sign);
 }
 
-int	ft_char_len(int str, int base_num)
+int	ft_len(long nbr, int base_len)
 {
-	int		len;
-	int		sign;
-	long	num;
+	int	len;
 
 	len = 0;
-	sign = 1;
-	num = (long)str;
-	if (num < 0)
+	if (nbr < 0)
 	{
-		num *= -1;
-		sign = -1;
-	}
-	while (num > 0)
-	{
-		num /= base_num;
+		nbr *= -1;
 		len++;
 	}
-	len++;
-	return (len * sign);
-}
-
-void	ft_put_nbr(char *ret, int str, char *base, int base_num)
-{
-	int		idx;
-	int		len;
-	long	num;
-
-	len = ft_char_len(str, base_num);
-	num = (long)str;
-	if (len < 0)
+	while (nbr > 0)
 	{
-		idx = (len * -1) - 1;
-		num *= -1;
+		nbr /= base_len;
+		len++;
 	}
-	else
-		idx = len - 2;
-	ret[idx - 1] = '\0';
-	while (idx >= 0)
-	{	
-		if (idx == 0 && len < 0)
-		{
-			ret[idx] = '-';
-			break ;
-		}
-		ret[idx] = base[num % base_num];
-		num /= base_num;
-		idx--;
-	}
+	return (len);
 }
 
-char	*ft_itoa_base(int str, char *base, int base_num)
+char	*ft_putnbr(long nbr, char *base_to, int len, char *str)
+{
+	int	sign;
+	int	base_len;
+
+	if (nbr < 0)
+	{
+		nbr *= -1;
+		sign = -1;
+	}
+	base_len = 0;
+	while (base_to[base_len] != '\0')
+		base_len++;
+	str[len + 1] = '\0';
+	while (nbr > 0)
+	{
+		str[len] = base_to[nbr % base_len];
+		nbr /= base_len;
+		len--;
+	}
+	if (sign < 0)
+		str[0] = '-';
+	return (str);
+}
+
+char	*ft_itoa_base(int nbr, char *base_to, int base_len)
 {
 	int		len;
-	char	*ret;
+	char	*str;
 
-	len = ft_char_len(str, base_num);
-	if (len < 0)
-		ret = (char *)malloc(sizeof(char) * (-len + 1));
-	else
-		ret = (char *)malloc(sizeof(char) * len);
-	if (ret == 0)
+	len = ft_len((long)nbr, base_len);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == 0)
 		return (0);
-	ft_put_nbr(ret, str, base, base_num);
-	return (ret);
+	return (ft_putnbr((long)nbr, base_to, len - 1, str));
 }
