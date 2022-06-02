@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 10:48:35 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 13:37:42 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 16:23:02 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,14 @@ int	ft_ultimate_range(int **range, int min, int max)
 	*range = array;
 	return (max - min);
 }
+
+
+!@#
+abc!agre@!agwe!@#ag
+
+
+[][abc\0]
+[]
+[]
+[]
+[\0]
