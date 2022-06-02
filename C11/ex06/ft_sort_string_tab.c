@@ -1,27 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_sort_string_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 18:09:34 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:33:49 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/02 11:23:50 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/02 11:32:13 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int(*f)(char*))
+void	ft_swap(char **str1, char **str2)
+{
+	char	*temp;
+	
+	temp = *str1;
+	*str1 = *str2;
+	*str2 = temp;
+}
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	idx;
+
+	idx = 0;
+	while (s1[idx] != '\0' || s2[idx] != '\0')
+	{
+		if (s1[idx] == s2[idx])
+			idx++;
+		else
+			return (s1[idx] - s2[idx]);
+	}
+	return (0);
+}
+
+void	ft_sort_string_tab(char **tab)
 {
 	int	i;
-	int	cnt;
 
 	i = 0;
-	cnt = 0;
-	while (i < length)
+	while (tab[i + 1] != 0)
 	{
-		if (f(tab[i]) != 0)
-			cnt++;
+		if (ft_strcmp(tab[i], tab[i + 1]) > 0)
+			ft_swap(&tab[i], &tab[i + 1]);
 		i++;
 	}
-	return (cnt);
 }

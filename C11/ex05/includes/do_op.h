@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do-op.h                                            :+:      :+:    :+:   */
+/*   do_op.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:46:47 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/01 19:56:52 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:09:21 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	ft_atoi(char *str);
 void	ft_print(int nb);
 void	ft_putnbr(int nb);
 void	ft_putstr(char *str);
-void add(int num1, int num2);
-void sub(int num1, int num2);
-void mod(int num1, int num2);
-void mod(int num1, int num2);
-void mod(int num1, int num2);
+void	add(int num1, int num2);
+void	sub(int num1, int num2);
+void	mul(int num1, int num2);
+void	div(int num1, int num2);
+void	mod(int num1, int num2);
 
 #endif

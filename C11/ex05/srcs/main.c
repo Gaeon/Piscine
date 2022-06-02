@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:16:36 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/01 20:28:38 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 11:23:18 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	ft_valid_op(char c)
 {
-	if (c != '+' || c != '-' || c != '*' || c != '/' || c != '%')
+	if (c != '+' && c != '-' && c != '*' && c != '/' && c != '%')
 		return ('0');
 	else
 		return (c);
@@ -40,7 +40,11 @@ void	ft_calc(int num1, int num2, char oper)
 	while (op[i] != 0)
 	{
 		if(op[i] == oper)
+		{
 			f[i](num1, num2);
+			break ;
+		}
+		i++;
 	}
 }
 

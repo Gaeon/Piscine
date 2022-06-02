@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_advanced_sort_string_tab.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 18:09:34 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:33:49 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/02 11:28:48 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/02 11:32:12 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int length, int(*f)(char*))
+void	ft_swap1(char **str1, char **str2)
+{
+	char	*temp;
+	
+	temp = *str1;
+	*str1 = *str2;
+	*str2 = temp;
+}	
+
+void	ft_advanced_sort_string_tab(char **tab, int(*cmp)(char *, char *))
 {
 	int	i;
-	int	cnt;
 
 	i = 0;
-	cnt = 0;
-	while (i < length)
+	while (tab[i + 1] != 0)
 	{
-		if (f(tab[i]) != 0)
-			cnt++;
+		if (cmp(tab[i], tab[i + 1]) > 0)
+			ft_swap1(&tab[i], &tab[i + 1]);
 		i++;
 	}
-	return (cnt);
 }
