@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:04:42 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 11:54:10 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/02 19:28:12 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 int	*ft_map(int *tab, int length, int (*f)(int))
 {
 	int	i;
+	int	*arr;
 
 	i = 0;
+	arr = (int *)malloc(sizeof(int) * length);
+	if (arr == 0)
+		return (0);
 	while (i < length)
 	{
-		tab[i] = f(tab[i]);
+		arr[i] = f(tab[i]);
 		i++;
 	}
-	return (tab);
+	return (arr);
 }
