@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int	ft_atoi(char *str)
 {
@@ -36,4 +37,9 @@ int	ft_atoi(char *str)
 	}
 	printf("%d %d\n", ret, sign*ret);
 	return (sign * ret);
+}
+
+int main()
+{
+	printf("%d %d", atoi("1234"), ft_atoi("1234"));
 }
