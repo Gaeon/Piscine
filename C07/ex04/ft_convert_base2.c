@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:25:42 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/02 16:22:55 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/04 19:41:08 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,13 @@ char	*ft_itoa_base(int nbr, char *base_to, int base_len)
 	int		len;
 	char	*str;
 
+	if (nbr == 0)
+	{
+		str = (char *)malloc(sizeof(char) * 2);
+		str[0] = base_to[0];
+		str[1] = '\0';
+		return (str);
+	}
 	len = ft_len((long)nbr, base_len);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == 0)

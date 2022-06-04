@@ -102,6 +102,8 @@ int main(){
       free(str);  
       str = ft_convert_base("15858", "01-278", "019ABCDEF");
       printf("null : %s\n", str);
+	  str = ft_convert_base("0", "0123456789", "pa");
+	  printf("p : %s\n", str);
       free(str);
    }
    {

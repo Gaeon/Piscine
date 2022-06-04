@@ -30,12 +30,3 @@ int	*ft_range(int min, int max)
 	}
 	return (arr);
 }
-
-!@#
-abcw!arst@ahd!@ar#hr
-[][abcw\0]
-[]
-[]
-[]
-[]
-[\0]
