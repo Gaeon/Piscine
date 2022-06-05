@@ -6,12 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 14:08:24 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/05/25 21:08:24 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/06 00:57:14 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_rec_hex(unsigned long long nbr)
 {
@@ -43,7 +42,6 @@ void	*ft_print_memory(void *addr, unsigned int size)
 {
 	char	*temp;
 	int		idx;
-	int		i;
 
 	temp = (char *)addr;
 	while (size >= 0)
