@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 18:12:10 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/05 21:26:42 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/05 22:26:07 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 	int	res;
 
 	i = 0;
-	while ((f(tab[i], tab[i + 1]) == 0) && (i + 1 < length))
+	while ((i + 1 < length) && (f(tab[i], tab[i + 1]) == 0))
 		i++;
 	if (i + 1 < length)
 	{
@@ -25,9 +25,9 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 	}
 	while (i + 1 < length)
 	{
-		if ((res < 0) && (f(tab[i + 1], tab[i]) > 0))
+		if ((res < 0) && (f(tab[i], tab[i + 1]) > 0))
 			return (0);
-		else if ((res > 0) && (f(tab[i + 1], tab[i]) < 0))
+		else if ((res > 0) && (f(tab[i], tab[i + 1]) < 0))
 			return (0);
 		i++;
 	}
