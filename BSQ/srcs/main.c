@@ -6,11 +6,9 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:21:29 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/05 20:24:10 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/06 18:52:12 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 #include "bsq.h"
 
@@ -72,9 +70,14 @@ void	file_input(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
+	// 표준입력
 	if (argc < 2)
 		std_input();
+	// 파일입출력
 	else
+	{
 		file_input(argc, argv);
+		write(1, "\n", 1);
+	}
 	return (0);
 }
