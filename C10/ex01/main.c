@@ -5,34 +5,44 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 14:25:23 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/06 17:15:45 by gaeokim          ###   ########.fr       */
+/*   Created: 2022/06/06 17:26:20 by gaeokim           #+#    #+#             */
+/*   Updated: 2022/06/06 21:56:36 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
 #include <unistd.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <libgen.h>
 
-int	main(int argc, char *argv[])
+void	ft_display(int argc, char *argv[])
 {
 	int		fd;
+	int		idx;
 	char	*c;
-
-	if (argc == 1)
-		write(2, "File name missing.\n", 19);
-	else if (argc > 2)
-		write(2, "Too many arguments.\n", 20);
-	else
+	
+	idx = 1;
+	while (idx < argc)
 	{
-		fd = open(argv[1], O_RDONLY);
+		fd = open(argv[idx], O_RDONLY);
 		if (fd == -1)
-			write(2, "Cannot read file.\n", 18);
+		{
+			
+		}
 		else
 		{
 			while (read(fd, &c, 1))
 				write(1, &c, 1);
 			close(fd);
 		}
+		idx++;
 	}
-	return (0);
+}
+
+int main(int argc, char *argv[])
+{
+	if (argc < 2)
+		return (0);
+	else
+		ft_display(argc, argv);
 }

@@ -1,0 +1,5 @@
+file1
+ABCDE
+12345
+54321
+EDCBA
