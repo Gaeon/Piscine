@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:21:58 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/06 21:56:42 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/07 19:04:32 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,30 @@ int	ft_atoi(char *str, int size)
 	i = 0;
 	sign = 1;
 	ret = 0;
-	while (('\t' <= str[i] && str[i] <= '\r') || str[i] == ' ')
+	while ((9 <= str[i] && str[i] <= 13) || str[i] == ' ')
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-		{
 			sign *= (-1);
-		}
 		i++;
 	}
 	while ('0' <= str[i] && str[i] <= '9' && i < size)
 	{
-		ret *= 10;
-		ret += str[i] - '0';
+		ret = ret * 10 + str[i] - '0';
 		i++;
 	}
 	return (ret * sign);
+}
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = -1;
+	while (str[++len])
+		;
+	return (len);
 }
 
 char	*ft_strdup(char *src)

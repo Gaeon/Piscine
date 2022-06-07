@@ -6,21 +6,11 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:22:27 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/06 21:56:56 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/07 18:55:20 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
-
-int	ft_strlen(char *str)
-{
-	int	len;
-
-	len = -1;
-	while (str[++len])
-		;
-	return (len);
-}
 
 int	is_split(char c)
 {
@@ -43,7 +33,7 @@ int	word_count(char *str)
 	return (count);
 }
 
-void	split_word(char **arr, char *str, int *offset)
+void	word_split(char **arr, char *str, int *offset)
 {
 	int	count;
 	int	i;
@@ -79,7 +69,7 @@ char	**ft_split(char *str)
 	i = -1;
 	offset = 0;
 	while (++i < num_word)
-		split_word(&(arr[i]), str, &offset);
+		word_split(&(arr[i]), str, &offset);
 	arr[i] = (char *)0;
 	return (arr);
 }

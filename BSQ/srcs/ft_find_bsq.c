@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map2.c                                          :+:      :+:    :+:   */
+/*   ft_find_bsq.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:23:21 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/06 21:56:44 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/07 19:00:30 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	max_index(int **map, t_map_info info, t_loc *loc)
 	return (max);
 }
 
-void	BSQ(char ***arr, int max, t_loc loc, t_map_info info)
+void	bsq(char ***arr, int max, t_loc loc, t_map_info info)
 {
 	int	i;
 	int	j;
@@ -111,7 +111,7 @@ void	find_biggest_square(char **arr, t_map_info *info)
 	}
 	make_map(&map, arr, *info);
 	max = max_index(map, *info, &loc);
-	BSQ(&arr, max, loc, *info);
+	bsq(&arr, max, loc, *info);
 	print_arr(arr, *info);
 	i = 0;
 	while (i < info->row)

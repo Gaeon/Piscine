@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_map.c                                           :+:      :+:    :+:   */
+/*   ft_make_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:22:49 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/06 21:56:47 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/07 18:57:20 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bsq.h"
 
-int	parse_map(int file, char ***arr, t_map_info *info)
-{
-	char		buff[BUFF_SIZE];
-	int			read_byte;
-	int			offset;
-
-	read_byte = read(file, buff, BUFF_SIZE);
-	if (read_byte < 0)
-		exit(0);
-	*arr = ft_split(buff);
-	if (!*arr)
-		exit(0);
-	info->row = ft_atoi((*arr)[0], ft_strlen((*arr)[0]) - 3);
-	offset = ft_strlen((*arr)[0]) - 1;
-	info->full = (*arr)[0][offset--];
-	info->obs = (*arr)[0][offset--];
-	info->empty = (*arr)[0][offset];
-	return (is_valid(*arr, info));
-}
-
-int	set_info(int file, t_map_info *info, char **buff)
+int	put_info(int file, t_map_info *info, char **buff)
 {
 	int	read_byte;
 	int	offset;
@@ -50,7 +30,27 @@ int	set_info(int file, t_map_info *info, char **buff)
 	return (1);
 }
 
-int	parse_std_map(int file, char ***arr, t_map_info *info)
+int	make_file_map(int file, char ***arr, t_map_info *info)
+{
+	char		buff[BUFF_SIZE];
+	int			read_byte;
+	int			offset;
+
+	read_byte = read(file, buff, BUFF_SIZE);
+	if (read_byte < 0)
+		exit(0);
+	*arr = ft_split(buff);
+	if (!*arr)
+		exit(0);
+	info->row = ft_atoi((*arr)[0], ft_strlen((*arr)[0]) - 3);
+	offset = ft_strlen((*arr)[0]) - 1;
+	info->full = (*arr)[0][offset--];
+	info->obs = (*arr)[0][offset--];
+	info->empty = (*arr)[0][offset];
+	return (valid_check(*arr, info));
+}
+
+int	make_std_map(int file, char ***arr, t_map_info *info)
 {
 	char		*buff;
 	int			read_byte;
@@ -59,7 +59,7 @@ int	parse_std_map(int file, char ***arr, t_map_info *info)
 	buff = (char *)malloc(sizeof(char) * BUFF_SIZE);
 	if (!buff)
 		exit(0);
-	if (!set_info(file, info, &buff))
+	if (!put_info(file, info, &buff))
 		exit(0);
 	(*arr) = (char **)malloc(sizeof(char *) * (info->row + 2));
 	if (!(*arr))
@@ -75,10 +75,10 @@ int	parse_std_map(int file, char ***arr, t_map_info *info)
 	}
 	free(buff);
 	(*arr)[offset] = 0;
-	return (is_valid(*arr, info));
+	return (valid_check(*arr, info));
 }
 
-int	is_valid(char **arr, t_map_info *info)
+int	valid_check(char **arr, t_map_info *info)
 {
 	int	i;
 	int	j;
