@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:22:49 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/07 18:57:20 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/08 20:45:56 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ int	make_file_map(int file, char ***arr, t_map_info *info)
 	int			read_byte;
 	int			offset;
 
+	offset = -1;
+	while (++offset < BUFF_SIZE)
+		buff[offset] = 0;
 	read_byte = read(file, buff, BUFF_SIZE);
 	if (read_byte < 0)
 		exit(0);
