@@ -6,13 +6,13 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 22:16:33 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/09 22:18:56 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/09 22:24:15 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int#pragma endregionmain(void)
+int main(void)
 {
 	write(1, "hi", 1);
 }

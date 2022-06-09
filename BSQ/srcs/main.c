@@ -6,7 +6,7 @@
 /*   By: gaeokim <gaeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 20:21:29 by gaeokim           #+#    #+#             */
-/*   Updated: 2022/06/08 20:47:02 by gaeokim          ###   ########.fr       */
+/*   Updated: 2022/06/09 20:02:28 by gaeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,8 @@ void	ft_file_input(int argc, char **argv)
 		else
 			ft_putstr(2, MSG_MAP_ERR);
 		ft_map_init(arr, &info, &file);
-		write(1, "\n", 2);
+		if (i < argc - 1)
+			write(1, "\n", 1);
 	}
 }
 
